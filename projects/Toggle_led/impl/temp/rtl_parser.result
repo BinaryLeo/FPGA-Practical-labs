@@ -1,0 +1,10 @@
+[
+ {
+  "InstFile" : "/Users/leomoura/Project/LeomouraIT/FPGA-Practical-labs/projects/Toggle_led/src/toggle_led.v",
+  "InstLine" : 26,
+  "InstName" : "switch_led",
+  "ModuleFile" : "/Users/leomoura/Project/LeomouraIT/FPGA-Practical-labs/projects/Toggle_led/src/toggle_led.v",
+  "ModuleLine" : 26,
+  "ModuleName" : "switch_led"
+ }
+]
