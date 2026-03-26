@@ -288,20 +288,20 @@ The physical FPGA is organized as a **two-dimensional matrix** of configurable l
 │                    GW1NR-9 CHIP ARRAY                       │
 ├─────────────────────────────────────────────────────────────┤
 │                                                             │
-│  ┌─────┐ ┌─────┐ ┌─────┐ ┌─────┐         ┌─────┐ ┌─────┐   │
-│  │ CLB │ │ CLB │ │ CLB │ │ CLB │   ...   │ CLB │ │ I/O │ ← Pins 10-16
-│  │(0,0)│ │(0,1)│ │(0,2)│ │(0,3)│         │     │ │LEDs │   │
-│  └──┬──┘ └──┬──┘ └──┬──┘ └──┬──┘         └──┬──┘ └──┬──┘   │
+│  ┌─────┐ ┌─────┐ ┌─────┐ ┌─────┐         ┌─────┐ ┌─────┐    │
+│  │ CLB │ │ CLB │ │ CLB │ │ CLB │   ...   │ CLB │ │ I/O │     ← Pins 10-16
+│  │(0,0)│ │(0,1)│ │(0,2)│ │(0,3)│         │     │ │LEDs │    │
+│  └──┬──┘ └──┬──┘ └──┬──┘ └──┬──┘         └──┬──┘ └──┬──┘    │
 │     │       │       │       │               │       │       │
-│  ┌──┴──┐ ┌──┴──┐ ┌──┴──┐ ┌──┴──┐         ┌──┴──┐ ┌──┴──┐   │
-│  │ CLB │ │ CLB │ │ FF  │ │ FF  │   ...   │ FF  │ │ I/O │   │
-│  │     │ │     │ │cnt0 │ │cnt1 │         │cnt19│ │ S1  │ ← Pin 3
-│  └──┬──┘ └──┬──┘ └──┬──┘ └──┬──┘         └──┬──┘ └──┬──┘   │
+│  ┌──┴──┐ ┌──┴──┐ ┌──┴──┐ ┌──┴──┐         ┌──┴──┐ ┌──┴──┐    │
+│  │ CLB │ │ CLB │ │ FF  │ │ FF  │   ...   │ FF  │ │ I/O │    │
+│  │     │ │     │ │cnt0 │ │cnt1 │         │cnt19│ │ S1  │     ← Pin 3
+│  └──┬──┘ └──┬──┘ └──┬──┘ └──┬──┘         └──┬──┘ └──┬──┘    │
 │     │       │       │       │               │       │       │
-│  ┌──┴──┐ ┌──┴──┐ ┌──┴──┐ ┌──┴──┐         ┌──┴──┐ ┌──┴──┐   │
-│  │ CLB │ │ CLB │ │ FF  │ │ FF  │   ...   │ FF  │ │ I/O │   │
-│  │     │ │     │ │led0 │ │led1 │         │led5 │ │ CLK │ ← Pin 52
-│  └─────┘ └─────┘ └─────┘ └─────┘         └─────┘ └─────┘   │
+│  ┌──┴──┐ ┌──┴──┐ ┌──┴──┐ ┌──┴──┐         ┌──┴──┐ ┌──┴──┐    │
+│  │ CLB │ │ CLB │ │ FF  │ │ FF  │   ...   │ FF  │ │ I/O │    │
+│  │     │ │     │ │led0 │ │led1 │         │led5 │ │ CLK │     ← Pin 52
+│  └─────┘ └─────┘ └─────┘ └─────┘         └─────┘ └─────┘    │
 │                                                             │
 │       ... (matrix continues across entire chip area) ...    │
 │                                                             │
@@ -341,7 +341,7 @@ The compilation process transforms your code into physical elements:
 ┌──────────────────────────────────────────────────────────────────┐
 │  STAGE 2: Netlist (Component List)                               │
 ├──────────────────────────────────────────────────────────────────┤
-│  • 27 Flip-Flops (6 for led + 20 for counter + 1 for prev)      │
+│  • 27 Flip-Flops (6 for led + 20 for counter + 1 for prev)       │
 │  • 6 Inverters (NOT bit-by-bit for led <= ~led)                  │
 │  • 1 20-bit Comparator (debounce_cnt < 270000)                   │
 │  • 1 20-bit Adder (debounce_cnt + 1)                             │
@@ -352,12 +352,12 @@ The compilation process transforms your code into physical elements:
 ┌──────────────────────────────────────────────────────────────────┐
 │  STAGE 3: Physical Layout (Array Allocation)                     │
 ├──────────────────────────────────────────────────────────────────┤
-│  • FF led[0] → CLB(2,3)  ──Route──→ IOB → Pin 10 (LED0)         │
-│  • FF led[1] → CLB(2,4)  ──Route──→ IOB → Pin 11 (LED1)         │
-│  • FF led[5] → CLB(3,5)  ──Route──→ IOB → Pin 16 (LED5)         │
-│  • FF cnt[0:19] → CLBs(4,1) to (4,5) (grouped counter)          │
-│  • Input S1 → IOB(Pin 3) ──Route──→ CLB(5,1)                    │
-│  • Clock → IOB(Pin 52) ──Route──→ Global clock matrix           │
+│  • FF led[0] → CLB(2,3)  ──Route──→ IOB → Pin 10 (LED0)          │
+│  • FF led[1] → CLB(2,4)  ──Route──→ IOB → Pin 11 (LED1)          │
+│  • FF led[5] → CLB(3,5)  ──Route──→ IOB → Pin 16 (LED5)          │
+│  • FF cnt[0:19] → CLBs(4,1) to (4,5) (grouped counter)           │
+│  • Input S1 → IOB(Pin 3) ──Route──→ CLB(5,1)                     │
+│  • Clock → IOB(Pin 52) ──Route──→ Global clock matrix            │
 └──────────────────────────────────────────────────────────────────┘
 ```
 
