@@ -82,14 +82,22 @@ Start here if you are new to FPGAs:
 git clone https://github.com/yourusername/fpga-practical-labs.git
 cd fpga-practical-labs
 
-# 2. Install tools ... coming soon!
+# 2. Install tools (see docs/)
 
-# 3. Check the hardware folder for supported boards
-cd hardware/
+# 3. Check available projects
+cd projects/
 
-# 4. Projects coming soon!
+# 4. Start with Toggle LED
+cd Toggle_led/
 ```
 
+## Projects
+
+| Project | Description | Status |
+|---------|-------------|--------|
+| [Toggle LED](projects/Toggle_led/) | Basic LED toggle using Tang Nano 9K | ✅ Available |
+
+---
 
 ## License
 
