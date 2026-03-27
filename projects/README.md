@@ -9,7 +9,7 @@ This folder contains practical FPGA projects ranging from basic blink LED to adv
 | Project | Difficulty | Description |
 |---------|------------|-------------|
 | [Toggle LED](./Toggle_led/) | Beginner | ON/OFF control system via button with debounce and toggle |
-| [Servo Control](./servo_control/) | Beginner | Servo motor (Futaba S3003) control with synchronized LED progress bar |
+| [Servo Control](./Servo_control/) | Beginner | Servo motor (Futaba S3003) control with synchronized LED progress bar |
 
 ---
 
@@ -55,7 +55,7 @@ A button press controls both a 6-LED progress bar and a servo motor position. De
 - Tang Nano 9K (Gowin GW1NR-9C)
 - Futaba S3003 Servo Motor
 
-**Location:** [./servo_control/](./servo_control/)
+**Location:** [./Servo_control/](./Servo_control/)
 
 ---
 

@@ -96,7 +96,7 @@ cd Toggle_led/
 | Projeto | Descrição | Status |
 |---------|-----------|--------|
 | [Toggle LED](projects/Toggle_led/) | Toggle básico de LED usando Tang Nano 9K | ✅ Disponível |
-| [Servo Control](projects/servo_control/) | Controle de motor servo com LEDs de progresso | ✅ Disponível |
+| [Servo Control](projects/Servo_control/) | Controle de motor servo com LEDs de progresso | ✅ Disponível |
 
 ---
 
