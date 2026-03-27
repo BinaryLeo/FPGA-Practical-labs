@@ -1,0 +1,10 @@
+[
+ {
+  "InstFile" : "/Users/leomoura/Project/LeomouraIT/FPGA-Practical-labs/projects/Servo_control/src/progress_servo.v",
+  "InstLine" : 1,
+  "InstName" : "led_servo_futaba",
+  "ModuleFile" : "/Users/leomoura/Project/LeomouraIT/FPGA-Practical-labs/projects/Servo_control/src/progress_servo.v",
+  "ModuleLine" : 1,
+  "ModuleName" : "led_servo_futaba"
+ }
+]
