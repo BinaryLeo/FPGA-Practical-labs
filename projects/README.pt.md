@@ -9,7 +9,7 @@ Esta pasta contém projetos práticos de FPGA, desde o básico blink LED até im
 | Projeto | Dificuldade | Descrição |
 |---------|-------------|-----------|
 | [Toggle LED](./Toggle_led/) | Iniciante | Sistema de controle ON/OFF via botão com debounce e toggle |
-| [Servo Control](./servo_control/) | Iniciante | Controle de motor servo (Futaba S3003) com barra de LEDs sincronizada |
+| [Servo Control](./Servo_control/) | Iniciante | Controle de motor servo (Futaba S3003) com barra de LEDs sincronizada |
 
 ---
 
@@ -55,7 +55,7 @@ Um botão controla tanto uma barra de progresso de 6 LEDs quanto a posição de 
 - Tang Nano 9K (Gowin GW1NR-9C)
 - Motor Servo Futaba S3003
 
-**Localização:** [./servo_control/](./servo_control/)
+**Localização:** [./Servo_control/](./Servo_control/)
 
 ---
 

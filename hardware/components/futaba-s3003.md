@@ -118,4 +118,4 @@ Futaba S3003 Connector:
 
 ## Related Projects
 
-- [Servo Control with Progress LEDs](../../projects/servo_control/) - FPGA implementation example for Tang Nano 9K
+- [Servo Control with Progress LEDs](../../projects/Servo_control/) - FPGA implementation example for Tang Nano 9K
