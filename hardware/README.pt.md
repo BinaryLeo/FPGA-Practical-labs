@@ -1,6 +1,6 @@
 # Hardware
 
-Este repositório suporta múltiplas placas de desenvolvimento FPGA. Embora nosso objetivo seja fornecer exemplos para várias plataformas, os projetos base iniciais são construídos usando o **Tang Nano 9K**.
+Este repositório suporta múltiplas placas de desenvolvimento FPGA e componentes eletrônicos para construção de projetos. Embora nosso objetivo seja fornecer exemplos para várias plataformas, os projetos base iniciais são construídos usando o **Tang Nano 9K**.
 
 ## Placas Suportadas
 
@@ -27,3 +27,15 @@ Cada placa possui sua própria página de documentação com:
 - Arquivos de constraints de exemplo
 
 Selecione sua placa da lista acima para começar.
+
+## Componentes
+
+Documentação para componentes eletrônicos utilizados nos projetos.
+
+### Atuadores
+
+| Componente | Descrição |
+|-----------|-------------|
+| [Futaba S3003](components/futaba-s3003.md) | Motor servo padrão (180°, torque 4,2 kg·cm) |
+
+Mais componentes serão adicionados à medida que os projetos forem expandidos.
